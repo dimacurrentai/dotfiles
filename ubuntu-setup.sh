@@ -10,7 +10,8 @@ git zsh vim curl wget jq screen
 sudo build-essential cmake
 python3 python3-dev
 golang nodejs npm
-default-jdk gradle
+openjdk-17-jdk
+gradle
 libncurses-dev
 libncurses5-dev
 podman

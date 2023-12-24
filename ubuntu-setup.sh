@@ -3,6 +3,8 @@
 # This "script" is meant to be copy-pasted into a fresh Ubuntu.
 # Testing under WSL, because why not?
 
+# TODO tomorrow: Add `../current` and `../../current` into the YCM header path.
+
 sudo apt-get update
 
 ALL_APT_PACKAGES="""

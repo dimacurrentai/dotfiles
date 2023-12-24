@@ -25,8 +25,6 @@ qrencode
 python3-pip
 python3-colorama
 lcov
-gcov
-geninfo
 htop
 inetutils-tools
 net-tools
@@ -36,7 +34,7 @@ android-sdk
 sdkmanager
 """
 
-time sudo apt-get install $ALL_APT_PACKAGES
+time sudo apt-get install -y $ALL_APT_PACKAGES
 
 #echo zsh | chsh
 #

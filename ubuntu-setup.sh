@@ -9,7 +9,7 @@ ALL_APT_PACKAGES="""
 git zsh vim curl wget jq screen
 sudo build-essential cmake
 python3 python3-dev
-golang nodejs
+golang nodejs npm
 default-jdk gradle
 libncurses-dev
 libncurses5-dev
@@ -36,13 +36,15 @@ sdkmanager
 
 time sudo apt-get install -y $ALL_APT_PACKAGES
 
-#echo zsh | chsh
-#
-#git clone https://github.com/dkorolev/dotfiles ~/.dotfiles
-#cp ~/.dotfiles/.zshrc /home/dev/
-#cp ~/.dotfiles/.vimrc /home/dev/
-#cp ~/.dotfiles/.inputrc /home/dev/
-#cp ~/.dotfiles/.screenrc /home/dev/
-#
-#git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/Valloric/YouCompleteMe ~/.vim/pack/plugins/opt/YouCompleteMe
-#(cd ~/.vim/pack/plugins/opt/YouCompleteMe; ./install.py --all)
+sudo mkdir -p /usr/lib/android-sdk/licenses
+sudo chmod a+rw  /usr/lib/android-sdk/licenses
+sudo mkdir -p /opt/android-sdk
+sudo chmod a+rw  /opt/android-sdk
+yes | sdkmanager --licenses
+
+git clone https://github.com/dkorolev/dotfiles ~/.dotfiles
+cp $(find .dotfiles/ -maxdepth 1 -name '.*' -type f) .
+sudo chsh -s $(which zsh) $(whoami)
+
+git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/Valloric/YouCompleteMe ~/.vim/pack/plugins/opt/YouCompleteMe
+(cd ~/.vim/pack/plugins/opt/YouCompleteMe; ./install.py --all)

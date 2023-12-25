@@ -1,0 +1,28 @@
+git zsh vim curl wget jq screen
+sudo build-essential cmake
+python3 python3-dev
+golang nodejs
+default-jdk gradle
+libncurses-dev
+libncurses5-dev
+podman
+tree
+x11-apps
+libncurses-dev
+gnuplot plotutils
+openssh-server
+gnuplot
+meld
+qrencode
+python3-pip
+python3-colorama
+lcov
+gcov
+geninfo
+htop
+inetutils-tools
+net-tools
+cloc
+clang-format
+android-sdk
+sdkmanager
